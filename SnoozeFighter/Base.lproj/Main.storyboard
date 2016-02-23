@@ -22,12 +22,12 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="SnoozeFighter" id="LP4-bP-tyG">
-                                        <barButtonItem key="leftBarButtonItem" title="Edit" id="d4E-EV-f5u">
+                                        <barButtonItem key="leftBarButtonItem" enabled="NO" id="d4E-EV-f5u">
                                             <connections>
                                                 <action selector="editButtonPressed:" destination="BYZ-38-t0r" id="dm1-aB-oYv"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Save" id="RW7-1N-Pgq">
+                                        <barButtonItem key="rightBarButtonItem" enabled="NO" id="RW7-1N-Pgq">
                                             <connections>
                                                 <action selector="saveButtonPressed:" destination="BYZ-38-t0r" id="U3W-0p-9bq"/>
                                             </connections>
@@ -41,7 +41,7 @@
                                     <!--2016-02-23 02:06:21 +0000-->
                                 </date>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:53 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Frg-Jb-S2B">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--:--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Frg-Jb-S2B">
                                 <rect key="frame" x="20" y="128" width="560" height="94"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="78"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -53,6 +53,20 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckT-Xj-gr3">
+                                <rect key="frame" x="210" y="477" width="180" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="kUB-q9-SNB"/>
+                                    <constraint firstAttribute="height" constant="30" id="tkJ-jQ-L1S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wM8-1i-wun"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -61,15 +75,19 @@
                             <constraint firstItem="9TN-il-Vd8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="CWc-Em-R5Q"/>
                             <constraint firstItem="OGf-LR-oET" firstAttribute="top" secondItem="Frg-Jb-S2B" secondAttribute="bottom" constant="8" id="Dqq-3W-pqS"/>
                             <constraint firstItem="Xqm-tw-oGB" firstAttribute="trailing" secondItem="9TN-il-Vd8" secondAttribute="trailing" id="Dqy-UY-IPd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ckT-Xj-gr3" secondAttribute="trailing" constant="216" id="KFR-sO-o8V"/>
                             <constraint firstItem="Xqm-tw-oGB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LOC-8O-h3f"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xqm-tw-oGB" secondAttribute="bottom" id="Lhq-MJ-dDF"/>
                             <constraint firstItem="Frg-Jb-S2B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Qid-f2-dmo"/>
                             <constraint firstItem="9TN-il-Vd8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RXI-7Q-FoM"/>
                             <constraint firstItem="Xqm-tw-oGB" firstAttribute="leading" secondItem="9TN-il-Vd8" secondAttribute="leading" id="ReU-2o-N2A"/>
                             <constraint firstItem="Frg-Jb-S2B" firstAttribute="top" secondItem="9TN-il-Vd8" secondAttribute="bottom" constant="64" id="SAn-kt-EC7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ckT-Xj-gr3" secondAttribute="bottom" constant="93" id="Yjv-pp-BjD"/>
                             <constraint firstItem="9TN-il-Vd8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="ZNC-FB-4rc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xqm-tw-oGB" secondAttribute="bottom" constant="340" id="fpe-yG-lwT"/>
+                            <constraint firstItem="ckT-Xj-gr3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hLh-t3-Y6z"/>
                             <constraint firstItem="OGf-LR-oET" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lRL-Uy-eGB"/>
+                            <constraint firstItem="ckT-Xj-gr3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="216" id="q76-zW-kRy"/>
                             <constraint firstItem="Xqm-tw-oGB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rKx-2w-HA3"/>
                             <constraint firstAttribute="trailing" secondItem="9TN-il-Vd8" secondAttribute="trailing" id="rLd-Zx-ZZO"/>
                             <constraint firstItem="OGf-LR-oET" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="vIl-wh-tVf"/>
@@ -86,6 +104,8 @@
                                 <exclude reference="LOC-8O-h3f"/>
                                 <exclude reference="ReU-2o-N2A"/>
                                 <exclude reference="vxC-iA-vY6"/>
+                                <exclude reference="KFR-sO-o8V"/>
+                                <exclude reference="q76-zW-kRy"/>
                                 <exclude reference="fpe-yG-lwT"/>
                             </mask>
                         </variation>
@@ -94,6 +114,7 @@
                         <outlet property="editButton" destination="d4E-EV-f5u" id="qUc-xK-WfQ"/>
                         <outlet property="saveButton" destination="RW7-1N-Pgq" id="33z-Nd-bwC"/>
                         <outlet property="statusLabel" destination="OGf-LR-oET" id="pDC-j0-TPH"/>
+                        <outlet property="stopButton" destination="ckT-Xj-gr3" id="6gq-vA-zYm"/>
                         <outlet property="timeLabel" destination="Frg-Jb-S2B" id="vFu-cq-1Cw"/>
                         <outlet property="timePicker" destination="Xqm-tw-oGB" id="XF1-td-Zad"/>
                     </connections>
