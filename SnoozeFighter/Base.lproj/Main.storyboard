@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SnoozeFighter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9TN-il-Vd8">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="SnoozeFighter" id="LP4-bP-tyG">
+                                        <barButtonItem key="leftBarButtonItem" title="Edit" id="d4E-EV-f5u">
+                                            <connections>
+                                                <action selector="editButtonPressed:" destination="BYZ-38-t0r" id="dm1-aB-oYv"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="RW7-1N-Pgq">
+                                            <connections>
+                                                <action selector="saveButtonPressed:" destination="BYZ-38-t0r" id="U3W-0p-9bq"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Xqm-tw-oGB">
+                                <rect key="frame" x="0.0" y="384" width="600" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="477885981.82622099">
+                                    <!--2016-02-23 02:06:21 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:53 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Frg-Jb-S2B">
+                                <rect key="frame" x="20" y="128" width="560" height="94"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="78"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No alarm set" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGf-LR-oET">
+                                <rect key="frame" x="20" y="230" width="560" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9TN-il-Vd8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="4j2-sg-he1"/>
+                            <constraint firstItem="Xqm-tw-oGB" firstAttribute="top" secondItem="9TN-il-Vd8" secondAttribute="bottom" id="ASZ-fa-KUU"/>
+                            <constraint firstItem="9TN-il-Vd8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="CWc-Em-R5Q"/>
+                            <constraint firstItem="OGf-LR-oET" firstAttribute="top" secondItem="Frg-Jb-S2B" secondAttribute="bottom" constant="8" id="Dqq-3W-pqS"/>
+                            <constraint firstItem="Xqm-tw-oGB" firstAttribute="trailing" secondItem="9TN-il-Vd8" secondAttribute="trailing" id="Dqy-UY-IPd"/>
+                            <constraint firstItem="Xqm-tw-oGB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LOC-8O-h3f"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xqm-tw-oGB" secondAttribute="bottom" id="Lhq-MJ-dDF"/>
+                            <constraint firstItem="Frg-Jb-S2B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Qid-f2-dmo"/>
+                            <constraint firstItem="9TN-il-Vd8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RXI-7Q-FoM"/>
+                            <constraint firstItem="Xqm-tw-oGB" firstAttribute="leading" secondItem="9TN-il-Vd8" secondAttribute="leading" id="ReU-2o-N2A"/>
+                            <constraint firstItem="Frg-Jb-S2B" firstAttribute="top" secondItem="9TN-il-Vd8" secondAttribute="bottom" constant="64" id="SAn-kt-EC7"/>
+                            <constraint firstItem="9TN-il-Vd8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="ZNC-FB-4rc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xqm-tw-oGB" secondAttribute="bottom" constant="340" id="fpe-yG-lwT"/>
+                            <constraint firstItem="OGf-LR-oET" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lRL-Uy-eGB"/>
+                            <constraint firstItem="Xqm-tw-oGB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rKx-2w-HA3"/>
+                            <constraint firstAttribute="trailing" secondItem="9TN-il-Vd8" secondAttribute="trailing" id="rLd-Zx-ZZO"/>
+                            <constraint firstItem="OGf-LR-oET" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="vIl-wh-tVf"/>
+                            <constraint firstItem="Xqm-tw-oGB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vxC-iA-vY6"/>
+                            <constraint firstItem="Frg-Jb-S2B" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="waE-x7-6xW"/>
+                            <constraint firstAttribute="trailing" secondItem="Xqm-tw-oGB" secondAttribute="trailing" id="xpq-gb-H2v"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="CWc-Em-R5Q"/>
+                                <exclude reference="ZNC-FB-4rc"/>
+                                <exclude reference="ASZ-fa-KUU"/>
+                                <exclude reference="Dqy-UY-IPd"/>
+                                <exclude reference="LOC-8O-h3f"/>
+                                <exclude reference="ReU-2o-N2A"/>
+                                <exclude reference="vxC-iA-vY6"/>
+                                <exclude reference="fpe-yG-lwT"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="editButton" destination="d4E-EV-f5u" id="qUc-xK-WfQ"/>
+                        <outlet property="saveButton" destination="RW7-1N-Pgq" id="33z-Nd-bwC"/>
+                        <outlet property="statusLabel" destination="OGf-LR-oET" id="pDC-j0-TPH"/>
+                        <outlet property="timeLabel" destination="Frg-Jb-S2B" id="vFu-cq-1Cw"/>
+                        <outlet property="timePicker" destination="Xqm-tw-oGB" id="XF1-td-Zad"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="429"/>
+        </scene>
+    </scenes>
+</document>
