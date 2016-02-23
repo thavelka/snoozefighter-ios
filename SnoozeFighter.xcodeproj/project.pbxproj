@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2204248C1C7C12170059BC93 /* AlarmClockBeep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2204248B1C7C12170059BC93 /* AlarmClockBeep.wav */; };
+		220424921C7C2E530059BC93 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220424911C7C2E530059BC93 /* ScannerViewController.swift */; };
 		2204695D1C7BF32200873A09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204695C1C7BF32200873A09 /* AppDelegate.swift */; };
 		2204695F1C7BF32200873A09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204695E1C7BF32200873A09 /* ViewController.swift */; };
 		220469621C7BF32200873A09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220469601C7BF32200873A09 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		2204248B1C7C12170059BC93 /* AlarmClockBeep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = AlarmClockBeep.wav; sourceTree = "<group>"; };
+		220424911C7C2E530059BC93 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		220469591C7BF32200873A09 /* SnoozeFighter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnoozeFighter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2204695C1C7BF32200873A09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2204695E1C7BF32200873A09 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				2204695E1C7BF32200873A09 /* ViewController.swift */,
+				220424911C7C2E530059BC93 /* ScannerViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2204695F1C7BF32200873A09 /* ViewController.swift in Sources */,
+				220424921C7C2E530059BC93 /* ScannerViewController.swift in Sources */,
 				2204695D1C7BF32200873A09 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

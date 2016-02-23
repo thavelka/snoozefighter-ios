@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SnoozeFighter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Main" id="BYZ-38-t0r" customClass="ViewController" customModule="SnoozeFighter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -53,7 +53,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckT-Xj-gr3">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckT-Xj-gr3">
                                 <rect key="frame" x="210" y="477" width="180" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="kUB-q9-SNB"/>
@@ -67,11 +67,41 @@
                                     <action selector="stopButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wM8-1i-wun"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uh6-pY-zSX">
+                                <rect key="frame" x="210" y="477" width="180" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="Pw8-7T-LoV"/>
+                                    <constraint firstAttribute="width" constant="180" id="W8K-Zx-8Qt"/>
+                                    <constraint firstAttribute="height" constant="30" id="kv9-e5-DMM"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="mBI-ZB-BSD"/>
+                                    <constraint firstAttribute="height" constant="30" id="qOj-su-nNM"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="sqN-GJ-gRn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Set QR Code">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Pw8-7T-LoV"/>
+                                        <exclude reference="kv9-e5-DMM"/>
+                                        <exclude reference="mBI-ZB-BSD"/>
+                                        <exclude reference="sqN-GJ-gRn"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="setCodeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ces-NB-Xal"/>
+                                    <segue destination="Zqz-fD-U1w" kind="presentation" identifier="openScannerSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="uS0-Es-c6C"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Uh6-pY-zSX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="473-BI-3VT"/>
                             <constraint firstItem="9TN-il-Vd8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="4j2-sg-he1"/>
+                            <constraint firstItem="Uh6-pY-zSX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1" id="6YG-DI-Vjk"/>
                             <constraint firstItem="Xqm-tw-oGB" firstAttribute="top" secondItem="9TN-il-Vd8" secondAttribute="bottom" id="ASZ-fa-KUU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Uh6-pY-zSX" secondAttribute="bottom" constant="93" id="Bb2-lM-3VZ"/>
                             <constraint firstItem="9TN-il-Vd8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="CWc-Em-R5Q"/>
                             <constraint firstItem="OGf-LR-oET" firstAttribute="top" secondItem="Frg-Jb-S2B" secondAttribute="bottom" constant="8" id="Dqq-3W-pqS"/>
                             <constraint firstItem="Xqm-tw-oGB" firstAttribute="trailing" secondItem="9TN-il-Vd8" secondAttribute="trailing" id="Dqy-UY-IPd"/>
@@ -82,14 +112,20 @@
                             <constraint firstItem="9TN-il-Vd8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RXI-7Q-FoM"/>
                             <constraint firstItem="Xqm-tw-oGB" firstAttribute="leading" secondItem="9TN-il-Vd8" secondAttribute="leading" id="ReU-2o-N2A"/>
                             <constraint firstItem="Frg-Jb-S2B" firstAttribute="top" secondItem="9TN-il-Vd8" secondAttribute="bottom" constant="64" id="SAn-kt-EC7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Uh6-pY-zSX" secondAttribute="bottom" constant="93" id="YHj-6H-ok1"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ckT-Xj-gr3" secondAttribute="bottom" constant="93" id="Yjv-pp-BjD"/>
                             <constraint firstItem="9TN-il-Vd8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="ZNC-FB-4rc"/>
+                            <constraint firstItem="Uh6-pY-zSX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bLZ-D6-Tyh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xqm-tw-oGB" secondAttribute="bottom" constant="340" id="fpe-yG-lwT"/>
+                            <constraint firstItem="Uh6-pY-zSX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="190" id="gfs-Sk-U4U"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Uh6-pY-zSX" secondAttribute="trailing" constant="190" id="gmU-S0-bc8"/>
                             <constraint firstItem="ckT-Xj-gr3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hLh-t3-Y6z"/>
                             <constraint firstItem="OGf-LR-oET" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lRL-Uy-eGB"/>
+                            <constraint firstItem="Xqm-tw-oGB" firstAttribute="top" secondItem="Uh6-pY-zSX" secondAttribute="bottom" constant="8" id="mTx-nD-bex"/>
                             <constraint firstItem="ckT-Xj-gr3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="216" id="q76-zW-kRy"/>
                             <constraint firstItem="Xqm-tw-oGB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rKx-2w-HA3"/>
                             <constraint firstAttribute="trailing" secondItem="9TN-il-Vd8" secondAttribute="trailing" id="rLd-Zx-ZZO"/>
+                            <constraint firstItem="Uh6-pY-zSX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sWc-fS-HeY"/>
                             <constraint firstItem="OGf-LR-oET" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="vIl-wh-tVf"/>
                             <constraint firstItem="Xqm-tw-oGB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vxC-iA-vY6"/>
                             <constraint firstItem="Frg-Jb-S2B" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="waE-x7-6xW"/>
@@ -103,9 +139,16 @@
                                 <exclude reference="Dqy-UY-IPd"/>
                                 <exclude reference="LOC-8O-h3f"/>
                                 <exclude reference="ReU-2o-N2A"/>
+                                <exclude reference="mTx-nD-bex"/>
                                 <exclude reference="vxC-iA-vY6"/>
+                                <exclude reference="6YG-DI-Vjk"/>
+                                <exclude reference="bLZ-D6-Tyh"/>
+                                <exclude reference="gfs-Sk-U4U"/>
+                                <exclude reference="gmU-S0-bc8"/>
+                                <exclude reference="sWc-fS-HeY"/>
                                 <exclude reference="KFR-sO-o8V"/>
                                 <exclude reference="q76-zW-kRy"/>
+                                <exclude reference="YHj-6H-ok1"/>
                                 <exclude reference="fpe-yG-lwT"/>
                             </mask>
                         </variation>
@@ -113,6 +156,7 @@
                     <connections>
                         <outlet property="editButton" destination="d4E-EV-f5u" id="qUc-xK-WfQ"/>
                         <outlet property="saveButton" destination="RW7-1N-Pgq" id="33z-Nd-bwC"/>
+                        <outlet property="setCodeButton" destination="Uh6-pY-zSX" id="bCr-PB-koy"/>
                         <outlet property="statusLabel" destination="OGf-LR-oET" id="pDC-j0-TPH"/>
                         <outlet property="stopButton" destination="ckT-Xj-gr3" id="6gq-vA-zYm"/>
                         <outlet property="timeLabel" destination="Frg-Jb-S2B" id="vFu-cq-1Cw"/>
@@ -122,6 +166,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="305" y="429"/>
+        </scene>
+        <!--Scanner-->
+        <scene sceneID="9zK-2L-Vyw">
+            <objects>
+                <viewController title="Scanner" id="Zqz-fD-U1w" customClass="ScannerViewController" customModule="SnoozeFighter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6rX-gj-2st"/>
+                        <viewControllerLayoutGuide type="bottom" id="9bO-4r-bqx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wev-1G-R9c">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No QR Code is detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnv-Fj-oyo">
+                                <rect key="frame" x="0.0" y="560" width="600" height="40"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2vC-dI-mvR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vnv-Fj-oyo" firstAttribute="leading" secondItem="wev-1G-R9c" secondAttribute="leadingMargin" constant="-20" id="PVr-dh-OKl"/>
+                            <constraint firstItem="9bO-4r-bqx" firstAttribute="top" secondItem="vnv-Fj-oyo" secondAttribute="bottom" id="UMg-74-WPo"/>
+                            <constraint firstItem="vnv-Fj-oyo" firstAttribute="centerX" secondItem="wev-1G-R9c" secondAttribute="centerX" id="avQ-Sl-wur"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vnv-Fj-oyo" secondAttribute="trailing" constant="-20" id="nfH-wW-RLx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="vnv-Fj-oyo" id="LCq-AU-SnY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L8P-5q-kg1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="949" y="429"/>
         </scene>
     </scenes>
 </document>
